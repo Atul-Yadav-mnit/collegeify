@@ -10,7 +10,7 @@ const ContactusComponent = () => {
 
     const dispatch = useDispatch()
     const handleSubmit = (values) => {
-        console.log('Current State is: ' + JSON.stringify(values));
+        //console.log('Current State is: ' + JSON.stringify(values));
         //alert('Current State is: ' + JSON.stringify(values));
         dispatch(actions.reset('contactUs'))
         // event.preventDefault();

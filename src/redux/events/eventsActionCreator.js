@@ -94,8 +94,8 @@ export const FetchEvent = (eid) => (dispatch) => {
                 description: eve.description,
                 questions: eveques
             }
-            console.log("event is")
-            console.log(event)
+           // console.log("event is")
+            //console.log(event)
             dispatch(EventSuccess(event))
         })
         .catch((err) => dispatch(EventFailed(err.message)))

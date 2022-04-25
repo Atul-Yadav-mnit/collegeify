@@ -32,7 +32,7 @@ export const FetchSocieties = () => (dispatch) => {
         })
         .catch((err) => {
             // alert(err)
-            console.log(err)
+            //console.log(err)
             dispatch(SocietiesFailed(err.message))
         })
 }
@@ -65,7 +65,7 @@ export const FetchSociety = (sid) => (dispatch) => {
         })
         .catch((err) => {
             // alert(err)
-            console.log(err)
+            //console.log(err)
             dispatch(SocietyFailed(err.message))
         })
 }

@@ -75,7 +75,7 @@ function MainComponent() {
     }
     
     const eventpage = ({match}) =>{
-        console.log(match.params)
+        //console.log(match.params)
         return (
             <EventPageComponent eid={match.params.eid} sid={match.params.sid}/>
         )
@@ -88,7 +88,7 @@ function MainComponent() {
     }
 
     const answerpage = ({match}) =>{
-        console.log(match.params)
+       // console.log(match.params)
         return (
             <AnswerPageComponent eid={match.params.eid} sid={match.params.sid}/>
         )

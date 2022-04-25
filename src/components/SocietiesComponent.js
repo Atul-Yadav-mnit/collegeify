@@ -38,7 +38,7 @@ const SocietiesComponent = () => {
     var display;
 
     useEffect(() => {
-        console.log("runnnnnn")
+        //console.log("runnnnnn")
         dispatch(FetchSocieties())
     },[])
 
@@ -51,7 +51,7 @@ const SocietiesComponent = () => {
     }
     else if(societies.payload != '')
     {
-        console.log("helo",societies.payload)
+        //console.log("helo",societies.payload)
         const society = societies.payload.map((society) => {
             return (
                 <SocietyList society={society}  key={society.id}/>

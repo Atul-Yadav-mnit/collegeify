@@ -25,7 +25,7 @@ let socket = io("http://localhost:8000")
     } );
 
     socket.on('join-room' ,(payload) => {
-        console.log("Joined and ",payload);
+        //console.log("Joined and ",payload);
     })
 
     user.socket = socket;
@@ -51,8 +51,8 @@ export const loginUser = (id, password) => (dispatch) => {
         password: password
     })
         .then((response) => {
-            console.log(response.data)
-            console.log(response.data._id)
+            //console.log(response.data)
+            //console.log(response.data._id)
             const user = {
                 type: "login",
                 _id: response.data.user.self._id,
@@ -70,8 +70,8 @@ export const loginUser = (id, password) => (dispatch) => {
                 token: response.data.token,
                 message: "Sign in successful!!!"
             }
-            console.log("user is")
-            console.log(user)
+            //console.log("user is")
+            //console.log(user)
             dispatch(SigninUserSuccess(user))
             //alert(response.data.user)
 
@@ -123,7 +123,7 @@ export const signupUser = (name, id, password) => (dispatch) => {
         password: password
     })
         .then((response) => {
-            // console.log(response)
+            // //console.log(response)
             dispatch(SignupUserSuccess())
         })
         .catch((err) => {
@@ -224,7 +224,7 @@ export const AddQuestionUser = (uid, eid, token, ques) => (dispatch) => {
         }
     })
         .then((response) => {
-            console.log("ooooo", response.data)
+            //console.log("ooooo", response.data)
             alert("Posted Successfully:)\nSoon an event manager will answer it ?")
             dispatch(QuestionUserSuccess(response.data))
         })
@@ -292,10 +292,10 @@ export const EditProfile = (twitter,facebook,instagram,linkedin,token,uid) => (d
         }
        
             dispatch(EditUserSuccess(body))
-       // console.log(response)
+       // //console.log(response)
     })
     .catch((err) => {
-        console.log(err)
+       //console.log (err)
         alert("Error: ",err.message)
         dispatch(EditUserFailed())
     })

@@ -28,7 +28,7 @@ export const FetchQuestions = (eid) => (dispatch) => {
         dispatch(QuestionsLoading());
         axios.get('http://localhost:8000/questions/events/'+eid)
         .then((response) => {
-            console.log("Questions is "+response)
+           // console.log("Questions is "+response)
             const qs = response.data.filter((res) => res.answer=='')
             dispatch(QuestionsSuccess(qs))
         })

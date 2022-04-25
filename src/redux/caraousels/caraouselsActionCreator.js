@@ -33,7 +33,7 @@ export const FetchCaraousels = () => (dispatch) => {
         })
         .catch((err) => { 
             alert(err)
-            console.log(err) 
+           // console.log(err) 
         dispatch(CaraouselsFailed(err.message)) } )
         // dispatch(CaraouselsLoading());
         // dispatch(CaraouselsSuccess(caraouselItems))

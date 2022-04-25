@@ -43,7 +43,7 @@ function LoginPageComponent() {
     }
 
     const handleSignUp = (event) => {
-        console.log('Current State is: ' + JSON.stringify(signupForm));
+       // console.log('Current State is: ' + JSON.stringify(signupForm));
         dispatch(signupUser(signupForm.name, signupForm.id, signupForm.password))
         setsignupForm((prev) => {
             const s = {
@@ -59,7 +59,7 @@ function LoginPageComponent() {
 
 
     const handleLogin = (event) => {
-        console.log('Current State is: ' + JSON.stringify(loginForm));
+       // console.log('Current State is: ' + JSON.stringify(loginForm));
         dispatch(loginUser(loginForm.id, loginForm.password))
         setloginForm((prev) => {
             const s = {
